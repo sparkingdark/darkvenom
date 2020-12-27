@@ -1,7 +1,19 @@
 module.exports = {
   ci: {
+    assert: {
+      preset: 'lighthouse:recommended',
+      assertions: {
+        'is-on-https': 'off',
+        'canonical': 'off',
+        'uses-http2': 'off',
+        'uses-rel-preconnect': 'off',
+        'uses-rel-preload': 'off',
+        'uses-optimized-images': 'off',
+        'unsized-images': 'off',
+      }
+    },
     collect: {
-      startServerCommand: 'npm run start',
+      startServerCommand: 'yarn run start',
       startServerReadyPattern: 'started server on',
       url: [
         'http://localhost:3000',
